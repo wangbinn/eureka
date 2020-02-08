@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: cloud-enjoy-campus
+
+server:
+  port: 9000
+
+
+eureka:
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 5000
+  client:
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/
+    fetch-registry: false
+    register-with-eureka: false
+    instance:
+      appname: eurka-server1
